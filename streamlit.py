@@ -131,11 +131,11 @@ if submit_button:
 
     input_data(date_str, no_nota, delivery_date, supplier, kategori, sub, nilai, cbm, image_url)
     
-    if supplier not in st.session_state.vendor['Vendor']:
+    if supplier not in st.session_state.vendor['Vendor'].values:
         st.warning("Supplier Baru, Apakah ingin menambahkan ke ")
         input_supplier(supplier)
 
-    if sub not in st.session_state.subitem["subitem"]:
+    if sub not in st.session_state.subitem["subitem"].values:
         st.warning("Sub Item Baru.")
         input_subitem(sub, kategori)
 
