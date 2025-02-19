@@ -97,7 +97,7 @@ else:
 
 # kategori deafault "Pilih Kategori"
 kategori = st.selectbox("Kategori", options=["Pilih Kategori"] + sorted(st.session_state.subitem["kategori"].astype(str).unique()), index=0, key="kategori")
-checksub = st.checkbox("New Sub item", key='sub')
+checksub = st.checkbox("New Sub item", key='sub') 
 if checksub:
     sub = st.text_input("Sub Item")
 else:
@@ -107,8 +107,8 @@ else:
     sub = st.selectbox("Sub", sorted(dropsubitem))
 
 
-nilai = st.number_input("Nilai", key='nilai')
-cbm = st.number_input("CBM", key='cbm')
+nilai = st.number_input("Nilai", key='nilai', placeholder='Masukkan Total Harga', value=None)
+cbm = st.number_input("CBM", key='cbm', placeholder='Masukkan Total CBM', value=None)
 image = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"], key='image')
 
 
