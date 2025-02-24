@@ -56,4 +56,3 @@ def input_data(date, nota, delivery_date, supplier, kategori, sub, nilai, cbm, i
 
     data = [date, nota, delivery_date, supplier, kategori, sub, nilai,cbm, image_url]
     sheet.append_row(data, value_input_option="USER_ENTERED")
-    st.write("testing")
