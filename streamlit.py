@@ -108,7 +108,11 @@ else:
 
 
 nilai = st.number_input("Nilai", key='nilai', placeholder='Masukkan Total Harga', value=None)
+
 cbm = st.number_input("CBM", key='cbm', placeholder='Masukkan Total CBM', value=None)
+st.warning("CBM decimal menggunakan (.)")
+if "," in str(cbm):
+    st.warning("pakai titik ya")
 image = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"], key='image')
 
 
